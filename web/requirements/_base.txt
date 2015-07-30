@@ -1,8 +1,8 @@
 # Base requirements file.
 # Place items here that should be installed in ALL environments.
 
-django==1.8
-djangorestframework==3.1.1
+django==1.8.3
+djangorestframework==3.1.3
 
 ## Needed by the settings base module. Do not remove.
 Unipath==1.1
@@ -21,7 +21,7 @@ dj-database-url==0.3.0
 # django-model-utils
 
 # PostgreSQL Database Adapter
-psycopg2==2.6
+psycopg2==2.6.1
 
 # MySQL Database Adapter
 # django-cymysql
@@ -37,7 +37,7 @@ psycopg2==2.6
 # djangorestframework-msgpack
 
 # https://github.com/gizmag/drf-ujson-renderer
-drf_ujson==1.2
+# drf_ujson==1.2
 
 # https://github.com/marcgibbons/django-rest-swagger
-django-rest-swagger==0.2.9
+django-rest-swagger==0.3.3
