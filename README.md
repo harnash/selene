@@ -1,5 +1,5 @@
-[![Requirements Status](https://requires.io/github/harnash/drf_app/requirements.svg?branch=master)](https://requires.io/github/harnash/drf_app/requirements/?branch=master)
-[![Build Status](https://travis-ci.org/harnash/drf_app.svg)](https://travis-ci.org/harnash/drf_app)	
+[![Requirements Status](https://requires.io/github/harnash/selene/requirements.svg?branch=master)](https://requires.io/github/harnash/selene/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/harnash/selene.svg)](https://travis-ci.org/harnash/selene)	
 		
-# Basic DRF application
-Simple DRF application (web)
+# Selene
+Authorization app
