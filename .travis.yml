@@ -18,4 +18,7 @@ install:
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 # command to run tests
-script: python web/apps/manage.py test
+scri pt:
+  - echo ${PYTHON_PATH}
+  - pwd
+  - python web/apps/manage.py test
