@@ -40,4 +40,4 @@ psycopg2==2.6.1
 # drf_ujson==1.2
 
 # https://github.com/marcgibbons/django-rest-swagger
-django-rest-swagger==0.3.4
+# django-rest-swagger==0.3.4
