@@ -8,13 +8,13 @@
 #     - redis:redis
 #   volumes:
 #     - /usr/src/app/
-#   env_file: .env
+#   env_file: .envrc
 #   command: python /usr/src/app/apps/manage.py runserver
 
 postgres:
   restart: always
   image: macadmins/postgres
-  env_file: .env
+  env_file: .envrc
   ports:
     - "5432:5432"
 
