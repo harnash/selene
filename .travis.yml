@@ -13,11 +13,9 @@ cache:
 addons:
   postgresql: "9.4"
 # command to install dependencies
-before_install:
-  - cd web
 install:
-  - pip install -r requirements.txt
+  - pip install -r web/requirements.txt
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 # command to run tests
-script: python apps/manage.py test
+script: python web/apps/manage.py test
