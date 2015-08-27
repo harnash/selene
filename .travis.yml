@@ -5,7 +5,7 @@ python:
   - "3.4"
 env:
   global:
-    - PYTHON_PATH=$TRAVIS_BUILD_DIR/web
+    - PYTHONPATH=$TRAVIS_BUILD_DIR/web
 cache: pip
 cache:
   directories:
