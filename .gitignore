@@ -58,3 +58,12 @@ target/
 
 # virtualenv
 .venv/
+
+# SQLite
+*.sqlite
+
+# IDE
+.idea/
+
+# statics
+/web/static/_build
