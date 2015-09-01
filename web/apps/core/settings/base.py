@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.facebook',
     'rest_auth',
     'rest_auth.registration',
+    'oauth2_provider',
 
     # local apps
 )
