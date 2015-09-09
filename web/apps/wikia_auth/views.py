@@ -18,13 +18,7 @@ class TokenInfoView(generics.RetrieveAPIView):
     required_scopes = ['read']
     lookup_field = 'token'
 
-    # def get(self, request, *args, **kwargs):
-    #     access_token = AccessToken.objects.get(token=request.auth.token)
-    #
-    #     return response.Response({
-    #         'access_token': access_token.token,
-    #         'expires_in': int((access_token.expires.replace(tzinfo=None)-datetime.datetime.now()).total_seconds()),
-    #         'token_type': 'Bearer',
-    #         'refresh_token': access_token.refresh_token.token,
-    #         'scope': access_token.scope
-    #     })
+    def get_object(self):
+        self.kwargs[self.lookup_field] = self.request.auth.token
+
+        return super(TokenInfoView, self).get_object()

@@ -2,11 +2,15 @@
 from __future__ import unicode_literals
 
 from rest_framework import serializers
+from datetime import datetime
 
 
-class AccessTokenSerializer(serializers.Serializer):
-    access_token = serializers.CharField(max_length=255, source='token')
-    expires_in = serializers.DateTimeField(source='expires')
-    # token_type = serializers.CharField(max_length=100)
-    refresh_token = serializers.CharField(max_length=255)
-    scope = serializers.CharField(allow_blank=True)
+class AccessTokenSerializer(serializers.BaseSerializer):
+    def to_representation(self, obj):
+        return {
+            "access_token": obj.token,
+            "expires_in": int((obj.expires.replace(tzinfo=None)-datetime.now()).total_seconds()),
+            "token_type": "Bearer",
+            "refresh_token": obj.refresh_token.token,
+            "scope": obj.scope,
+        }

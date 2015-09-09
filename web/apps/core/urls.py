@@ -14,7 +14,7 @@ urlpatterns = [
     # url(r'^rest-wikia_auth/registration/', include('rest_auth.registration.urls')),
     # url(r'^rest-wikia_auth/facebook/$', FacebookLogin.as_view(), name='fb_login'),
     url(r'^auth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    url(r'^auth2/', include('wikia_auth.urls')),
+    url(r'^auth/', include('wikia_auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^accounts/', include('allauth.urls')),
 ]
