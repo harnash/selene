@@ -6,5 +6,5 @@ from .views import TokenInfoView
 
 
 urlpatterns = [
-    url(r'^info$', TokenInfoView.as_view()),
+    url(r'^info/$', TokenInfoView.as_view()),
 ]

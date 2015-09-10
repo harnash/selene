@@ -21,7 +21,7 @@ dj-database-url==0.3.0
 # django-model-utils
 
 # PostgreSQL Database Adapter
-psycopg2==2.6.1
+# psycopg2==2.6.1
 
 # MySQL Database Adapter
 # django-cymysql
@@ -37,7 +37,7 @@ psycopg2==2.6.1
 # djangorestframework-msgpack
 
 # https://github.com/gizmag/drf-ujson-renderer
-# drf_ujson==1.2
+drf_ujson==1.2
 
 # https://github.com/marcgibbons/django-rest-swagger
 # django-rest-swagger==0.3.4
