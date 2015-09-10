@@ -5,8 +5,6 @@ from oauth2_provider.ext.rest_framework import TokenHasScope
 from oauth2_provider.models import AccessToken
 from rest_framework import generics
 from rest_framework import permissions
-from rest_framework import response
-import datetime
 
 from .serializers import AccessTokenSerializer
 
