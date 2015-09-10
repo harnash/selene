@@ -1,6 +1,7 @@
 # Base settings file
 
 import os
+import sys
 from unipath import Path
 
 from django.core.exceptions import ImproperlyConfigured
@@ -133,7 +134,7 @@ INSTALLED_APPS = (
     'oauth2_provider',
 
     # local apps
-    'wikia_auth',
+    'apps.wikia_auth',
 )
 
 ## Django REST Framework Settings
@@ -177,7 +178,13 @@ LOGGING = {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'log_to_stdout': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            # 'formatter': 'colored',
+            'stream': sys.stdout,
+        },
     },
     'loggers': {
         'django.request': {

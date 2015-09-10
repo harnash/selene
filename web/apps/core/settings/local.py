@@ -37,3 +37,9 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 INSTALLED_APPS += DEBUG_APPS
+
+LOGGING['loggers'][''] = {
+    'handlers': ['log_to_stdout'],
+    'level': 'DEBUG',
+    'propagate': True,
+}
