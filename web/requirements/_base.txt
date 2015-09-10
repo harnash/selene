@@ -50,3 +50,6 @@ drf_ujson==1.2
 
 # https://github.com/evonove/django-oauth-toolkit
 django-oauth-toolkit==0.9.0
+
+# https://github.com/chibisov/drf-extensions
+drf-extensions==0.2.7
