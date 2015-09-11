@@ -19,7 +19,7 @@ class TokenInfoView(generics.RetrieveAPIView):
     required_scopes = ['read']
     lookup_field = 'token'
 
-    @cache_response()
+    @cache_response(1)
     def get(self, request, *args, **kwargs):
         return super(TokenInfoView, self).get(request, *args, **kwargs)
 
