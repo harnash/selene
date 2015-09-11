@@ -5,7 +5,7 @@ from oauth2_provider.ext.rest_framework import TokenHasScope
 from oauth2_provider.models import AccessToken
 from rest_framework import generics
 from rest_framework import permissions
-from django.core import cache
+from django.core.cache import cache
 from rest_framework_extensions.cache.decorators import (
     cache_response
 )
@@ -24,6 +24,13 @@ class TokenInfoView(generics.RetrieveAPIView):
         return super(TokenInfoView, self).get(request, *args, **kwargs)
 
     def get_object(self):
-        self.kwargs[self.lookup_field] = self.request.auth.token
+        token = self.request.auth.token
+        token_key = 'token_' + token
 
-        return super(TokenInfoView, self).get_object()
+        obj = cache.get(token_key)
+        if obj is None:
+            self.kwargs[self.lookup_field] = token
+            obj = super(TokenInfoView, self).get_object()
+            cache.set(token_key, obj, 60)
+
+        return obj
